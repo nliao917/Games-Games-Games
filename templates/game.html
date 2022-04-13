@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<table class="game_table">
+
+    <caption class="title">Summary of {{data[0][1]}}</caption>
+    <caption><br></caption>
+    <caption>Average Length (hr): {{data[0][2]}}</caption>
+    <caption>Developer: {{data[0][14]}}</caption>
+    <caption>Score: {{data[0][9]}}, Attitude: {{data[0][11]}}</caption>
+    <caption>Source: <a href={{data[0][12]}}>
+        {{data[0][10]}}
+    </a></caption>
+    <thead>
+        <tr>
+            <th rowspan="2">Price ($)</th>
+            <th rowspan="2">Platform</th>
+            <th rowspan="2">Type</th>
+            
+            
+        </tr>
+    </thead>
+    <tbody class="game">
+        {% for n in data %}
+        <tr>
+        
+            <td>{{n[5]}}</td>
+            <td>{{n[3]}}</td>
+            <td>{{n[6]}}</td>
+        </td>
+
+        </tr>
+            
+        {% endfor %}
+
+    </tbody>
+</table>
+
+
+{% endblock %}
