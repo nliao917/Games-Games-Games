@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+<table class="the_table">
+    <tbody class="main_content">
+    
+    <tr id="tr_for_genre1">
+        {% for n in data %}
+        <td>
+        <a href="{{url_for('post',id=n[0])}}">
+            {{n[1]}}
+        </a>
+        </td>
+
+        {% endfor %}
+    </tr>
+    
+    </tbody>
+</table>
+
+{% endblock %}

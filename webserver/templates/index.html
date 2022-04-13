@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+<table class="the_table">
+    <tbody class="main_content">
+    <tr id="main_content_tr">
+        {% for n in data %}
+        <td>
+        <a href="{{url_for('post',id=n[0])}}">
+            {{n[1]}}
+            <img class="pics" src="/static/img/{{n[0]}}.png" width="500" height="500">
+        </a>
+        </td>
+        {% endfor %}
+    </tr>
+    
+    </tbody>
+</table>
+
+{% endblock %}

@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+<table>
+    <caption></caption>
+    <thead>
+    <tr>
+        <th rowspan="2">Name</th>
+        <th rowspan="2">Review</th>
+        <th rowspan="2">Platform</th>
+        
+    </tr>
+
+    </thead>
+    <tbody>
+    {% for n in data %}
+    <tr>
+        <td>{{n[0]}}</td>
+        <td>{{n[1]}}</td>
+        <td><a href={{n[3]}}>
+            {{n[2]}}
+        </a></td>
+
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
+
+{% endblock %}
