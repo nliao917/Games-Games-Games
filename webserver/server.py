@@ -115,7 +115,7 @@ def review():
     return render_template("review.html", **context)
 
 def get_platform(platform):
-    cursor = g.conn.execute('SELECT * FROM game g left join release_on r on g.gid=r.gid join platform p on r.pname=p.pname WHERE p.type =%s',platform)
+    cursor = g.conn.execute('SELECT distinct g.gid, g.name FROM game g left join release_on r on g.gid=r.gid join platform p on r.pname=p.pname WHERE p.type =%s',platform)
     names = []
     for result in cursor:
         names.append(result)
