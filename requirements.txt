@@ -1,4 +1,4 @@
 sqlalchemy
 click
 flask
-psycopg2
+psycopg2-binary
